@@ -1,0 +1,119 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case File #221B | Amna Muhammad</title>
+    <!-- <link rel="stylesheet" href="{% static 'portfolio/css/style.css' %}"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="home">
+    <header class="navbar" id="navbar">
+        <div class="logo">221 Baker Street</div>
+        <nav>
+            <a href="#about">Profile</a>
+            <a href="#projects">Cases</a>
+            <a href="#skills">Skills</a>
+            <a href="#achievements">Activities</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <div class="fog"></div>
+
+    <div class="hero-content">
+        <h1>Amna Muhammad</h1>
+        <p class="subheading">Undergrad Software Engineer • Collaborative Innovator • Driven to Make Technology Safe</p>
+        <p class="quote">
+    "When you have eliminated the impossible, whatever remains, however improbable, must be the truth.”<br>
+    — The Sign of the Four
+</p>
+        <div class="hero-buttons">
+            <a href="#about" class="btn">View Investigation</a>
+            <!-- <a href="{% static 'portfolio/files/Amna_CV.pdf' %}" class="btn" download>Download Case File (CV)</a> -->
+        </div>
+    </div>
+</section>
+
+<!-- ================= MERGED MAIN SECTION ================= -->
+<section id="main" class="section main-section">
+
+    <!-- About -->
+    <div class="subsection" id="about">
+        <h2>My Profile</h2>
+        <p>I am a second-year Software Engineering student with a strong passion for building intelligent AI models, exploring cutting-edge Machine Learning techniques, and advancing the field of Cybersecurity. I am driven by the vision of creating innovative solutions and implementing robust measures to ensure the safe, ethical, and responsible use of AI in today’s fast-paced technological landscape.</p>
+    </div>
+
+    <!-- Projects -->
+    <div class="subsection" id="projects">
+        <h2>Closed Cases Insight</h2>
+        <div class="grid grid-2x2">
+            <div class="case">
+                <h3>Case 1: ML Supervised Models</h3>
+                <p><strong>Tools Used:</strong> Python, EDA, Google Colab</p>
+                <a href="https://github.com/Amna-Sarfaraz/Python" target="_blank" class="btn-link">View Case Details</a>
+            </div>
+            <div class="case">
+                <h3>Case 2: Tahaffuz – Crime Reporting App</h3>
+                <p><strong>Tools Used:</strong> Prototype</p>
+                <a href="https://www.canva.com/design/DAG8EkCvq9M/ZxmLYRamXdTZl310dteviw/edit?utm_content=DAG8EkCvq9M&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank" class="btn-link">View Case Details</a>
+            </div>
+            <div class="case">
+                <h3>Case 3: Farm2Market – Direct Farmer to Market</h3>
+                <p><strong>Tools Used:</strong> C++, SQL, Django</p>
+                <a href="https://github.com/Amna-Sarfaraz/Farm2Market" target="_blank" class="btn-link">View Case Details</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Skills -->
+    <div class="subsection" id="skills">
+        <h2>Tools of Investigation / Skills</h2>
+        <div class="grid">
+            <div class="card">Python</div>
+            <div class="card">C++ (DSA & OOP)</div>
+            <div class="card">C# / ASP.NET</div>
+            <div class="card">HTML & CSS</div>
+            <div class="card">SQL & Access</div>
+            <div class="card">EDA & Visualization</div>
+            <div class="card">Machine Learning (Supervised)</div>
+        </div>
+    </div>
+
+    <!-- Achievements -->
+    <div class="subsection" id="achievements">
+        <h2>Activities</h2>
+        <ul class="achievements">
+            <li>NASA Space Apps Challenge | Local Runner-up & Global Nominee 2025</li>
+            <li>IBA Tech Tank | Pitching Competition</li>
+            <li>Competitive Programming and Hackatons</li>
+        </ul>
+    </div>
+
+    <!-- Contact -->
+    <div class="subsection" id="contact">
+        <h2>Contact Info</h2>
+        <div class="contact-links">
+            <p>Email: <a href="mailto:mohammadamna54@gmail.com" target="_blank">mohammadamna54@gmail.com</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/amna-muhammad123" target="_blank">linkedin.com/in/amna-muhammad123</a></p>
+            <p>GitHub: <a href="https://github.com/Amna-Sarfaraz" target="_blank">github.com/Amna-Sarfaraz</a></p>
+        </div>
+    </div>
+
+</section>
+<footer>
+    <p>© 2025 Amna Muhammad | All Rights Reserved</p>
+</footer>
+<script>
+    const nav = document.getElementById("navbar");
+    window.addEventListener("scroll", () => {
+        nav.classList.toggle("scrolled", window.scrollY > 50);
+    });
+</script>
+
+</body>
+</html>
