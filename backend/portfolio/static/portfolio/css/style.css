@@ -14,7 +14,6 @@ body {
 /* ================= HERO ================= */
 .hero {
     min-height: 100vh;
-    /* background: url("/static/portfolio/images/download.jpg") center/cover no-repeat; */
     background: url("/portfolio/images/download.jpg") center/cover no-repeat;
 
     
@@ -122,7 +121,6 @@ body {
 
 /* ================= MAIN SECTION ================= */
 .main-section {
-    /* background: url("/static/portfolio/images/5.jpg") center/cover no-repeat; */
     background: url("/portfolio/images/5.jpg") center/cover no-repeat;
     background-size: cover;
     padding: 150px 10%;
