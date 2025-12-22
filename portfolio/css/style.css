@@ -8,7 +8,8 @@
 body {
     font-family: 'Roboto', sans-serif;
     background: #0b0b0b;
-    color: #d4af37; /* golden font */
+    color: #d4af37;
+    overflow-x: hidden;
 }
 
 /* ================= HERO ================= */
@@ -22,7 +23,7 @@ body {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(0,0,0,0.6);
+    background: rgba(0,0,0,0.65);
 }
 
 .fog {
@@ -38,78 +39,88 @@ body {
     to { background-position: 1200px 0; }
 }
 
-/* Navbar */
+/* ================= NAVBAR ================= */
 .navbar {
     position: fixed;
+    top: 0;
     width: 100%;
-    padding: 15px 40px;
+    padding: 12px 24px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 10;
-    transition: 0.3s;
+    z-index: 100;
+    background: rgba(0,0,0,0.85);
 }
 
-.navbar.scrolled {
-    background: rgba(0,0,0,0.9);
+.navbar .logo {
+    font-size: 1.3rem;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.navbar-links {
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
 }
 
 .navbar a {
     color: #d4af37;
-    margin-left: 20px;
     text-decoration: none;
     font-weight: bold;
-    font-size: 1rem;
+    font-size: 0.95rem;
 }
 
-.navbar .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
-/* Hero content */
+/* ================= HERO CONTENT ================= */
 .hero-content {
     position: relative;
     z-index: 5;
     min-height: 100vh;
+    padding-top: 120px;
+    padding-left: 20px;
+    padding-right: 20px;
+
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 0 20px;
 }
 
 .hero-content h1 {
     font-family: 'Playfair Display', serif;
-    font-size: 5rem;
-    margin-bottom: 20px;
+    font-size: clamp(2.2rem, 6vw, 4.5rem);
+    margin-bottom: 15px;
     line-height: 1.2;
 }
 
 .subheading {
-    font-size: 1.4rem;
-    margin-bottom: 20px;
+    font-size: clamp(1rem, 3vw, 1.4rem);
+    max-width: 700px;
 }
 
 .quote {
     font-style: italic;
-    margin: 30px 0 40px;
-    max-width: 800px;
-    text-align: center;
+    margin: 25px 0 35px;
+    max-width: 700px;
+    font-size: 1rem;
 }
 
-/* Hero buttons */
+/* ================= HERO BUTTONS ================= */
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 .hero-buttons .btn {
-    margin: 10px;
-    padding: 15px 40px;
+    padding: 12px 30px;
     border: 2px solid #d4af37;
     color: #d4af37;
     text-decoration: none;
-    font-size: 1.2rem;
-    transition: 0.3s;
+    font-size: 1rem;
     border-radius: 5px;
-    white-space: nowrap;
+    transition: 0.3s;
 }
 
 .hero-buttons .btn:hover {
@@ -120,73 +131,57 @@ body {
 /* ================= MAIN SECTION ================= */
 .main-section {
     background: url("../images/5.jpg") center/cover no-repeat;
-    background-size: cover;
-    padding: 150px 10%;
+    padding: 120px 8%;
 }
 
-/* Subsections */
+/* ================= SUBSECTIONS ================= */
 .subsection {
-    margin-bottom: 120px;
+    margin-bottom: 100px;
 }
 
 .subsection h2 {
     font-family: 'Playfair Display', serif;
-    font-size: 4rem;
-    margin-bottom: 40px;
+    font-size: clamp(2.2rem, 6vw, 3.8rem);
+    margin-bottom: 35px;
     text-align: center;
 }
 
-/* Grid & Cards */
+/* ================= GRID ================= */
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-    justify-items: center;
-    align-items: stretch;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
 }
 
+/* ================= CARDS ================= */
 .card, .case {
-    padding: 30px 20px;
+    padding: 25px 20px;
     border: 1px solid #d4af37;
-    background: rgba(0,0,0,0.7);
+    background: rgba(0,0,0,0.75);
+    text-align: center;
     transition: 0.3s;
-    color: #d4af37;
-    font-size: 1.2rem;
-    text-align: center;
-    width: 100%;
-    max-width: 400px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
 }
 
-.case h3, .card {
-    margin-bottom: 15px;
-    font-weight: bold;
-    font-size: 1.5rem;
+.card h3, .case h3 {
+    font-size: 1.3rem;
+    margin-bottom: 12px;
 }
 
-.case p, .card p {
-    margin-bottom: 20px;
-    text-align: center;
+.card p, .case p {
+    font-size: 1rem;
     line-height: 1.5;
 }
 
-/* Project buttons */
+/* ================= BUTTON LINKS ================= */
 .btn-link {
-    display: inline-block;
     margin-top: 15px;
-    padding: 12px 30px;
+    padding: 10px 26px;
     border: 2px solid #d4af37;
     color: #d4af37;
     text-decoration: none;
-    font-size: 1rem;
-    font-weight: bold;
     border-radius: 5px;
-    text-align: center;
+    font-size: 0.95rem;
     transition: 0.3s;
-    white-space: nowrap;
 }
 
 .btn-link:hover {
@@ -194,90 +189,51 @@ body {
     color: #0b0b0b;
 }
 
-/* Hover effect */
-.case:hover, .card:hover {
-    transform: translateY(-8px);
-    border-color: #fff;
-}
-
-/* Achievements */
-.achievements {
-    list-style: disc inside;
-    font-size: 1.3rem;
-    max-width: 700px;
-    margin: 0 auto;
-    text-align: left;
-}
-
-.achievements li {
-    margin-bottom: 10px;
-}
-
-/* Contact Links */
+/* ================= CONTACT ================= */
 .contact-links {
     display: flex;
     flex-direction: column;
+    gap: 12px;
     align-items: center;
-    gap: 15px;
-    font-size: 1.2rem;
 }
 
-.contact-links a {
-    color: #d4af37;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.contact-links a:hover {
-    text-decoration: underline;
-}
-
-/* Footer */
+/* ================= FOOTER ================= */
 footer {
     background: rgba(0,0,0,0.9);
     text-align: center;
-    padding: 20px;
-    font-size: 1.1rem;
+    padding: 18px;
+    font-size: 0.95rem;
     border-top: 1px solid #d4af37;
 }
 
-/* ================= RESPONSIVE ================= */
+/* ================= MOBILE FIXES ================= */
+@media (max-width: 600px) {
 
-/* Large screens (1200px - desktop) */
-@media screen and (max-width:1200px){
-    .hero-content h1 { font-size: 4rem; }
-    .subheading { font-size: 1.3rem; }
-    .quote { font-size: 1.1rem; }
-    .subsection h2 { font-size: 3rem; }
-}
+    .navbar {
+        flex-direction: column;
+        gap: 8px;
+    }
 
-/* Medium screens (tablet) */
-@media screen and (max-width:992px){
-    .hero-content h1 { font-size: 3.5rem; }
-    .subheading { font-size: 1.2rem; }
-    .quote { font-size: 1rem; }
-    .hero-buttons .btn { font-size: 1rem; padding: 12px 30px; }
-}
+    .navbar-links {
+        justify-content: center;
+    }
 
-/* Small screens (mobile) */
-@media screen and (max-width:768px){
-    .hero-content h1 { font-size: 3rem; }
-    .subheading { font-size: 1.1rem; }
-    .quote { font-size: 0.95rem; max-width: 90%; }
-    .subsection h2 { font-size: 2.5rem; }
-    .grid { grid-template-columns: 1fr; }
-    .main-section { padding: 100px 5%; }
-    .navbar { padding: 15px 20px; }
-    .navbar a { margin-left: 15px; font-size: 0.95rem; }
-}
+    .hero-content {
+        padding-top: 140px;
+    }
 
-/* Extra small screens (very small mobiles) */
-@media screen and (max-width:480px){
-    .hero-content h1 { font-size: 2.2rem; }
-    .subheading { font-size: 1rem; }
-    .quote { font-size: 0.9rem; }
-    .hero-buttons .btn { padding: 10px 25px; font-size: 0.9rem; }
-    .card, .case { padding: 20px 15px; font-size: 1rem; }
-    .navbar a { font-size: 0.9rem; margin-left: 10px; }
-    .navbar .logo { font-size: 1.2rem; }
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+        max-width: 260px;
+        text-align: center;
+    }
+
+    .main-section {
+        padding: 90px 6%;
+    }
 }
